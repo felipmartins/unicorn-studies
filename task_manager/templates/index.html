@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load unicorn %}
+
+{% block title %}Task Manager{% endblock %}
+
+{% block content %}
+    <h1>Task Manager</h1>
+    <p>Here are your tasks:</p>
+    {% unicorn 'task-list' %}
+{% endblock %}
