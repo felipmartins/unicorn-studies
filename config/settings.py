@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_unicorn",
+    "task_manager",
 ]
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
