@@ -1,0 +1,14 @@
+<div>
+    <style>
+    [unicorn\:error\:invalid] {
+      border: 1px solid yellow !important;
+    }
+    [unicorn\:error\:required] {
+      border: 1px solid red !important;
+    }
+  </style>
+    <input unicorn:model="title" type="text" id="title" /><br />
+    <input unicorn:model="publish_date.defer" type="text" id="publish-date" unicorn:error:invalid="Enter a valid date/time."/><br />
+    <span class="error">{{ unicorn.errors.publish_date.0.message }}</span>
+    <button unicorn:click="$validate">Validate</button>
+  </div>
