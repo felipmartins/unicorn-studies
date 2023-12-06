@@ -1,3 +1,16 @@
 <div>
-    <!-- put component code here -->
-</div>
+    {% for book in books %}
+    <div>
+      <div>
+        <input unicorn:model.defer="books.{{ forloop.counter0 }}.title" type="text" id="title" />
+        {{ book.title }}
+      </div>
+      <div>
+        <input unicorn:model.defer="books.{{ forloop.counter0 }}.is_completed" type="checkbox" value="books.{{ forloop.counter0 }}.is_completed" id="description" />
+      </div>
+      <div>
+        <button unicorn:click="save({{ forloop.counter0 }})">Save</button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
